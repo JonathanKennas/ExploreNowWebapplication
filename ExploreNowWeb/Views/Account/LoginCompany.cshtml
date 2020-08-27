@@ -1,0 +1,20 @@
+﻿@model ExploreNowWeb.Models.Company
+@{
+    ViewBag.Title = "Logga in som företag/verksamhet";
+}
+<h2>Logga in</h2>
+
+@using (Html.BeginForm("LoginCompany", "Account", FormMethod.Post))
+{
+    <div class="jumbotron loginForm">
+            @Html.LabelFor(m => m.Email, "E-post:")<br />
+            @Html.TextBoxFor(m => m.Email)<br />
+            @Html.LabelFor(M => M.Password, "Lösenord:")<br />
+            @Html.PasswordFor(m => m.Password) <br />
+            <button class="btn btn-default" type="submit">Logga in</button> <br />
+
+            <h4>@Html.ActionLink("Skapa konto", "RegisterCompany", "Account")</h4>
+            <h4>@Html.ActionLink("Glömt lösenord?", "ForgotPasswordCompany", "Account")</h4>
+    </div>
+}
+

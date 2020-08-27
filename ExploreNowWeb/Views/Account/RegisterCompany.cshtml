@@ -1,0 +1,21 @@
+﻿@model ExploreNowWeb.Models.Company
+@{
+    ViewBag.Title = "Ansök om konto";
+}
+<h2>Ansök om konto</h2>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div class="jumbotron">
+        @Html.LabelFor(m => m.Name, "Namn:*")<br />
+        @Html.TextBoxFor(m => m.Name)<br />
+        @Html.LabelFor(m => m.Email, "E-post:*")<br />
+        @Html.TextBoxFor(m => m.Email)<br />
+        @Html.LabelFor(M => M.Password, "Lösenord:*")<br />
+        @Html.TextBoxFor(m => m.Password) <br />
+        @Html.LabelFor(M => M.Password, "Verifiera lösenord:*")<br />
+        @Html.TextBoxFor(m => m.Password) <br />
+
+        <button class="btn btn-default" type="submit">Ansök</button> <br /> <br />
+        <h6>* = obligatoriska fält.</h6>
+    </div>
+}

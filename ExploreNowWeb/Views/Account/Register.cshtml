@@ -1,0 +1,25 @@
+﻿@model ExploreNowWeb.Models.User
+@{
+    ViewBag.Title = "Skapa konto";
+}
+
+<h2>Skapa konto</h2>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+<div class="jumbotron">
+    @Html.LabelFor(m => m.Firstname, "Förnamn:*")<br />
+    @Html.TextBoxFor(m => m.Firstname)<br />
+    @Html.LabelFor(m => m.Lastname, "Efternamn:*")<br />
+    @Html.TextBoxFor(m => m.Lastname)<br />
+    @Html.LabelFor(m => m.Email, "E-post:*")<br />
+    @Html.TextBoxFor(m => m.Email)<br />
+    @Html.LabelFor(M => M.Password, "Lösenord:*")<br />
+    @Html.TextBoxFor(m => m.Password) <br />
+    @Html.LabelFor(M => M.Password, "Verifiera lösenord:*")<br />
+    @Html.TextBoxFor(m => m.Password) <br />
+
+    <button class="btn btn-default" type="submit">Skapa</button> <br /> <br />
+    <h6>* = obligatoriska fält.</h6>
+</div>
+}
+
