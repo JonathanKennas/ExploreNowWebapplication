@@ -54,7 +54,7 @@ namespace ExploreNowWeb.Models
             Lastname = lastname;
             Email = email;
         }
-        public List<User> getUsers() // Test för utläsning
+        public List<User> getUsers() // Test för utläsning, fungerar
         {
             try
             {
@@ -77,7 +77,7 @@ namespace ExploreNowWeb.Models
                 SQL.conn.Close();
             }
         }
-        public List<User> Login(string email, string password)
+        public List<User> Login(string email, string password) // Ej testad
         {
             logg.Clear();
             try
@@ -108,7 +108,7 @@ namespace ExploreNowWeb.Models
             }
             return logg;
         }
-        public User Register(string firstname, string lastname, string email, string password, int permission_id)
+        public User Register(string firstname, string lastname, string email, string password, int permission_id) // Ej testad
         {
             try
             {

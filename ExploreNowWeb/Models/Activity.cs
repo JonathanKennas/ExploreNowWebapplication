@@ -34,7 +34,7 @@ namespace ExploreNowWeb.Models
             Longitude = longitude;
             ActivityCategory = activitycategory;
         }
-        public string GetActivities() //List<Activity>
+        public string GetActivities() //List<Activity> // Ej testad
         {
             //int id = 1;
             var markers = "";
